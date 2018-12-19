@@ -1,0 +1,50 @@
+-- LoginServlet.java --
+LoginServlet.java creates a "player" session attribute holding 
+an instance of a Player.java object so every 
+servlet and page that uses the Player.java object can use
+methods to modify Player data like score and how many questions
+the user has clicked on. Also creates a "questionFactory"
+session attribute holding an instance of a QuestionFactory.java
+that contains all the questions for other servlets and pages
+to display questions and answers. 
+This servlet uses "questionFactory" attribute to randomly set 2 questions
+to daily doubles.
+
+-- PickQuestionServlet.java --
+When a question is a daily double and user enters a bid, 
+PickQuestionServlet.java gets the player score to check if bid amount is 
+matching requirements of how much they are allowed to bid. Also uses "questionFactory"
+to loop through the questions and answers so question-select.jsp displays the correct
+question that was selected. During the loop it creates a "currentQuestion" session
+attribute so question-select.jsp can display the category, question, answers and get 
+the question value. It gets the question from "questionFactory" and sets it to answered
+so game-board.jsp knows which questions to disable. 
+
+-- AnswerSelectServlet.java -- 
+AnswerSelectServlet uses the "player" and "currentQuestion" session attributes to
+check if user answer is correct or wrong and modfies player score depending on if 
+user is correct or wrong. This servlet creates "userCorrectBool", "modalHeader", 
+and "modalBody" session attributes for game-board.jsp to display a modal with
+corresponding values.
+
+-- game-board.jsp --
+Uses "userCorrectBool", "modalHeader", and "modalBody" session attributes for 
+display modal. If "userCorrectBool" is true then a modal stating the user is correct 
+is displayed otherwise stating the user is incorrect. Also uses "questionFactory"
+attribute to get questions and create links associated with question category and value.
+Aswell uses "player" to get player username and winnings to display for user.
+
+-- question-select.jsp --
+Uses "currentQuestion"  to display category title, question and associated answer 
+options to the user. If "currentQuestion" is a daily double it will display the 
+new value of the question for the user.
+
+-- daily-double.jsp -- 
+Uses "player" session attribute to get player score and checks if player score is
+less than 1000 and displays max bid as 1000 or displays player score if as max bid if
+greater than 1000.
+
+-- player-wins.jsp -- 
+Uses "player" session attribute to display player username and final winnings when 
+game is done.
+

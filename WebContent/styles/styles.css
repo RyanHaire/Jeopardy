@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+	text-align: center;
+	font-family: 'Verdana';
+}
+
+input[type="text"] {
+	font-size: 16px;
+	border: 1px solid #333;
+	border-radius: 8px;
+}
+
+.login-banner {
+	margin: 0 auto;
+	height: 300px;
+	width: 100% !important;
+	font-color: #fff;
+	object-fit: cover;
+	border-radius: 20px;
+	background-image: url("http://localhost:8080/Assignment2-Jeopardy/images/jeopardy_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#sheridan-logo {
+	height: 50px;
+	float: left;
+	margin-left: 30px;
+	border-radius: 40%;
+	box-shadow: 2px 2px 20px white;
+}
+
+
+#login-form {
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+#nameInputField {
+	padding: 20px;
+	margin-right: 10px;
+}
+
+#playGameBtn {
+	padding: 20px 20px;
+	background-color: #fe5f55;
+	margin-left: 10px;
+	color: #fff;
+	border: 0;
+	border-radius: 8px;
+	font-size: 16px;
+}
+
+.ui-widget-header,
+.ui-state-default,
+ui-button {
+  font-weight: bold;
+}
+
+.game-board-page {
+	font-family: 'Verdana';
+}
+
+.custom-ui-widget-header-correct {
+  background: forestgreen;
+  padding: 20px;
+  color: #fff;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.custom-ui-widget-header-incorrect {
+  background: crimson;
+  padding: 20px;
+  margin: 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#correctModal div {
+  display: none;
+}
+
+#wrongModal div {
+ display: none;
+}
+
+.game-board-header {
+	width: 100%;
+	display: flex;
+	color: #fff;
+	background-color: orange;
+	justify-content: center;
+}
+
+.player-name {
+	font-weight: 700;
+	margin-right: 20px;
+	color: #fff !important;
+	font-size: 40px;
+}
+
+.winnings {
+	font-weight: 700;
+	font-size: 40px;
+	color: #fff !important;
+	margin-left: 20px;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.column {
+	height: 30rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+.category-title {
+	font-weight: 600;
+	width: 100%;
+	font-size: 28px;
+	margin: 3rem 0;
+	padding: 10px 18px;
+	background-color: darkorange;
+	color: #fff;
+}
+
+.category-question-link {
+	text-decoration: none;
+	background-color: slateblue;
+	padding: 20px 25px;
+	border: 1px solid #5D63FF;
+	border-radius: 8px;
+	color: #fff;
+}
+
+.category-question-link:hover {
+	background-color: #494DC7;
+	border: 1px solid #5D63FF;
+}
+
+.category-question-link-disabled {
+	text-decoration: line-through;
+	background-color: #8B94D1;
+	pointer-events: none;
+	padding: 20px 25px;
+	border-radius: 8px;
+	cursor: default;
+	color: #fff;
+}
+
+.question-select-page {
+	background-color: orange;
+	color: #fff;
+	font-family: 'Verdana';
+}
+.answer-grid {
+	margin: 50px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.question-page-category {
+	width: 100%;
+	color: #fff;
+	text-transform: uppercase;
+	margin-top: 18px;
+	text-align: center;
+}
+
+.answer-note {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.question {
+	text-align: center;
+	margin: 15px 0;
+	font-color: #fff;
+}
+
+.question-value {
+	text-align: center;
+	margin: 15px 0;
+	font-color: #fff;
+}
+
+
+.answer-radio-btn {
+	transform: scale(1.5); 
+	-moz-transform: scale(1.5); 
+	-ms-transform: scale(1.5); 
+	-webkit-transform: scale(1.5); 
+	-o-transform: scale(1.5); 
+}
+
+.answer-submit-btn {
+	border: none;
+	background-color: slateblue;
+	color: #fff;
+	appearance: none;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.answer-submit-btn:hover {
+	background-color: #5abdcd;
+}
+
+.answer-skip-btn {
+	border: none;
+	background-color: slateblue;
+	color: #fff;
+	padding: 10px;
+}
+
+.answer-skip-btn:hover {
+	background-color: #5abdcd;
+}
+
+.daily-double-page {
+	background-color: orange;
+	font-family: 'Verdana';
+	color: #fff;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.daily-double-header {
+	width: 100%;
+	display: flex;
+	color: #fff;
+	justify-content: center;
+	text-decoration: underline;
+}
+
+.bid-container {
+	display: flex;
+	width: 350px;
+	margin: 0 auto;
+	justify-content: space-around;
+}
+
+
+.daily-double-note {
+	font-size: 20px;
+}
+
+.bid-form {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.daily-double-input-label {
+	margin-bottom: 20px;
+}
+
+.daily-double-bid-input {
+	margin-bottom: 20px;
+}
+
+input[name="bid"] {
+	font-size: 16px;
+	padding: 20px;
+	border: 1px solid #333;
+	border-radius: 8px;
+}
+
+.daily-double-submit-btn {
+	border: none;
+	background-color: slateblue;
+	color: #fff;
+	padding: 10px;
+}
+
+.daily-double-submit-btn:hover {
+	background-color: #5abdcd;
+}
+
+.player-wins-page {
+	background-color: orange;
+	color: #fff;
+	height: 200px;
+	display: flex;
+	font-size: 30px;
+	flex-direction: column;
+	justify-content: space-around;
+	text-transform: uppercase;
+	font-family: 'Verdana';
+}
+
+
+
